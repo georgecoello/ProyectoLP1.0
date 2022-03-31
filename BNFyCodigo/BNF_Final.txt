@@ -1,0 +1,65 @@
+<programaFinal> ::- <programa>
+
+<programa> ::- <inicio><std><funcion><principal>
+
+<principal> ::- <tipoDeDato><nombreFuncion>")<llaveAp><nombreFuncion")"<puntoyComa><retorno><llaveCl>
+
+<funcion> ::- <tipoDeDato><nombreFuncion>")"<llaveAp><asignacion><llaveCl> | <tipoDeDato><nombreFuncion>")"<llaveAp><lectura><llaveCl> | <tipoDeDato><nombreFuncion>")"<llaveAp><secuencia><llaveCl> | <tipoDeDato><nombreFuncion>")"<llaveAp><repeticion><llaveCl> | <tipoDeDato><nombreFuncion>")"<llaveAp><iteracion><llaveCl> | <tipoDeDato><nombreFuncion>")"<llaveAp><secuencia><repeticion><iteracion><llaveCl> | <tipoDeDato><nombreFuncion>")"<llaveAp><imprimir><llaveCl>
+
+<nombreFuncion> ::- <palabra>"(" | <palabra><digito>"(" | palabra<guionBajo><palabra>"(" 
+
+<iteracion> ::- "mientras(" <nombreVariable><desigualdad><digito> ")"<llaveAp><imprimir><llaveCl> | "mientras(" <nombreVariable><desigualdad><digito> ")"<llaveAp><asignacion><imprimir><llaveCl> | "mientras(" <nombreVariable><desigualdad><digito> ")"<llaveAp><asignacion><operacionesBasicas><imprimir><llaveCl> | "mientras(" <nombreVariable><igualdad><digito> ")"<llaveAp><imprimir><llaveCl> | "mientras(" <nombreVariable><igualdad><digito> ")"<llaveAp><asignacion><imprimir><llaveCl> | "mientras(" <nombreVariable><igualdad><digito> ")"<llaveAp><asignacion><operacionesBasicas><imprimir><llaveCl>
+
+<repeticion> ::- "para(" <tipoDeDato><espacio><nombreVariable><igualdad><digito><puntoyComa><nombreVariable><desigualdad><digito><puntoyComa><nombreVariable><signoOpeacional><signoOpeacional>")"<llaveAp><imprimir><llaveCl> | "para(" <tipoDeDato><espacio><nombreVariable><igualdad><digito><puntoyComa><nombreVariable><desigualdad><digito><puntoyComa><nombreVariable><signoOpeacional><signoOpeacional>")"<llaveAp><asignacion><imprimir><llaveCl> | "para(" <tipoDeDato><espacio><nombreVariable><igualdad><digito><puntoyComa><nombreVariable><desigualdad><digito><puntoyComa><nombreVariable><signoOpeacional><signoOpeacional>")"<llaveAp><asignacion><operacionesBasicas><imprimir><llaveCl>
+
+<secuencia> ::- <si> | <si><sino>
+
+<si> ::- "si(" <nombreVariable><desigualdad><digito> ")"<llaveAp><imprimir><llaveCl> | "si(" <nombreVariable><desigualdad><digito> ")"<llaveAp><asignacion><imprimir><llaveCl> | "si(" <nombreVariable><desigualdad><digito> ")"<llaveAp><asignacion><operacionesBasicas><imprimir><llaveCl> | "si(" <nombreVariable><igualdad><digito> ")"<llaveAp><imprimir><llaveCl> | "si(" <nombreVariable><igualdad><digito> ")"<llaveAp><asignacion><imprimir><llaveCl> | "si(" <nombreVariable><desigualdad><digito> ")"<llaveAp><asignacion><imprimir><operacionesBasicas><llaveCl>
+
+<sino> ::- "sino"<llaveAp><imprimir><llaveCl> | "sino"<llaveAp><asignacion><imprimir><llaveCl> | "sino"<llaveAp><asignacion><operacionesBasicas><imprimir><llaveCl> | "sino"<llaveAp><imprimir><llaveCl> | "sino"<llaveAp><asignacion><imprimir><llaveCl> | "sino"<llaveAp><asignacion><imprimir><operacionesBasicas><llaveCl>
+
+<operacionesBasicas> ::- <nombreVariable><igualdad><digito><signoOpeacional><digito> | <nombreVariable><igualdad><nombreVariable><signoOpeacional><digito> | <nombreVariable><igualdad><nombreVariable><signoOpeacional><nombreVariable> | <nombreVariable><espacio><igualdad><espacio><digito><signoOpeacional><digito> | <nombreVariable><espacio><igualdad><espacio><nombreVariable><signoOpeacional><digito> | <nombreVariable><espacio><igualdad><espacio><nombreVariable><signoOpeacional><nombreVariable>
+
+<asignacion> ::- <tipoDeDato><espacio><nombreVariable><puntoyComa> | <tipoDeDato><espacio><nombreVariable><igualdad><digito><>puntoyComa | <tipoDeDato><espacio><nombreVariable><igualdad><tipoDeDato> | <tipoDeDato><espacio><nombreVariable><igualdad><digito><puntoyComa> | <tipoDeDato><espacio><nombreVariable><igualdad><tipoDeDato><puntoyComa> | <tipoDeDato><espacio><nombreVariable><igualdad><digito><signoOpeacional><nombreVariable><puntoyComa> | <tipoDeDato><espacio><nombreVariable><espacio><igualdad><espacio><digito><espacio><signoOpeacional><espacio><nombreVariable><puntoyComa>
+
+<lectura> ::- "cin>>" <nombreVariable> <PuntoyComa>
+
+<imprimir> ::- "cout<<" '"' <texto> '"' "<<nombreVariable<< endl"<PuntoyComa> | "cout<<" '"' <texto> '"' <PuntoyComa> | "cout<<" <nombreVariable> "<<endl"<puntoyComa> | "cout<<" <nombreVariable><puntoyComa>
+
+<nombreVariable> ::- <letra> | <nombreVariable><letra> | <nombreVariable><digito> |  <nombreVariable><guionBajo><digito>
+
+<texto> ::- <palabra>| <digito> | <palabra><digito> | <texto><palabra> 
+
+<palabra> ::- letra | <palabra><letra>
+
+<digito> ::- 0|1|2|3|4|5|6|7|8|9
+
+<letra> ::- a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z
+
+<tipoDeDato> ::- "cadena" | "entero" | "flotante" | "vacio"
+
+<std> ::- "using namespace std"<PuntoyComa>
+
+<inicio> ::- <hashtag><libreria>
+
+<libreria> ::- "<iostream>" 
+
+<retorno> ::- "return 0"<puntoyComa>
+
+<hashtag> ::- "#include"
+
+<puntoyComa> ::- ";"
+
+<guionBajo> ::- "_"
+
+<espacio> ::- " "
+
+<igualdad> ::- "="
+
+<signoOpeacional> ::- + | - | * | /
+
+<desigualdad> ::- "<" | ">" | "<=" | ">="
+
+<llaveCl> ::-  "}"
+
+<llaveAp> ::- "{" 

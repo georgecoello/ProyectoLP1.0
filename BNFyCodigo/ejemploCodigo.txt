@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std; 
+
+vacio declarar(){
+    entero a; 
+}
+
+vacio lectura(){
+    cin >> a;
+}
+
+vacio imprimir1()){
+    si (a < 10){
+        cout<< "El numero es menor que 10";
+    }
+    sino {
+        cout<< "El numero es mayor que 10"<<endl;
+    }
+}
+
+vacio imprimir2(){
+    para (entero i = 0; i <= 10; i++){
+        entero c; 
+        c = c+i;
+        cout<< c;
+    }
+}
+
+vacio imprimir3(){
+    mientras (a < 10){
+        cout<< "El valor de a es:"<<endl;
+    }
+}
+
+int principal(){
+    declarar();
+    lectura();
+    imprimir1();
+    imprimir2();
+    imprimir3();
+
+    return 0; 
+}
