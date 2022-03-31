@@ -1,0 +1,57 @@
+<programaFinal> ::- <programa>
+
+<programa> ::- <inicio><std><variable><imprimir><lectura><operacion> | <inicio><std><variable><imprimir><lectura><operacion><secuencia> |
+<inicio><std><variable><imprimir><lectura><operacion><iteracion> | <inicio><std><variable><imprimir><lectura><operacion><repeticion> |
+<inicio><std><variable><imprimir><lectura><operacion><secuencia><repeticion> | 
+<inicio><std><variable><imprimir><lectura><operacion><secuencia><iteracion> |
+<inicio><std><variable><imprimir><lectura><operacion><secuencia><repeticion><iteracion>
+
+<iteracion> ::- "mientras (" <nombreVariable><desigualdad><digito> ")"<llaveAp><operacion><llaveCl> | "mientras (" <nombreVariable><igualdad><digito> ")"<llaveAp><operacion><llaveCl>
+
+<repeticion> ::- "para(" <nombreVariable><desigualdad><digito> ";" <nombreVariable><desigualdad><digito> ";" <nombreVariable>++ ")"<llaveAp><operacion><llaveCl> | "para(" <nombreVariable><desigualdad><digito> ";" <nombreVariable><desigualdad><digito> ";" <nombreVariable>-- ")"<llaveAp><operacion><llaveCl>
+
+<secuencia> ::- "si(" <nombreVariable><desigualdad><digito>")"<llaveAp><operacion><llaveCl> | "si(" <nombreVariable><igualdad><digito>")"<llaveAp><operacion><llaveCl>
+
+<llaveCl> ::-  "}"
+
+<llaveAp> ::- "{" 
+
+<operacion> ::- <digito><signoOpeacional><digito><PuntoyComa>
+
+<signoOpeacional> ::- + | - | * | /
+
+<desigualdad> ::- "<" | ">" | "<=" | ">=" 
+
+<lectura> ::- "cin>>" <nombreVariable> <PuntoyComa>
+
+<imprimir> ::- "cout<<" '"'<texto> '"' "<<endl"<PuntoyComa> | "cout<<" '"' <texto> '"' <PuntoyComa>
+
+<variable> ::- <TipoDeDato><espacio><nombreVariable><signos><digito><espacio><igualdad><espacio><digito><PuntoyComa> | <TipoDeDato><espacio><nombreVariable><digito><espacio><igualdad><digito><PuntoyComa>  | <TipoDeDato><espacio><nombreVariable><signos><digito><espacio><igualdad><espacio><TipoDeDato><PuntoyComa> | <TipoDeDato><espacio><nombreVariable><digito><igualdad><TipoDeDato><PuntoyComa> |<TipoDeDato><espacio><nombreVariable><signos><digito><igualdad><digito><PuntoyComa> | <TipoDeDato><espacio><nombreVariable><digito><igualdad><digito><PuntoyComa> | <TipoDeDato><espacio><nombreVariable><signos><digito><igualdad><TipoDeDato><PuntoyComa>
+
+<igualdad> ::- =
+
+<espacio> ::- " "
+
+<signos> ::- "_" 
+
+<nombreVariable> ::- <letra> | <nombreVariable><letra> | <nombreVariable><letra><digito> | <nombreVariable><digito>
+
+<texto> ::- <palabra>| <digito> | <palabra><digito> | <texto><palabra> 
+
+<palabra> ::- letra | <palabra><letra>
+
+<digito> ::- 0|1|2|3|4|5|6|7|8|9
+
+<letra> ::- a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z
+
+<TipoDeDato> ::- "cadena" | "entero" | "flotante" | "flotante grande" | "entero corto" | "entero largo" | "booleano" | "verdadero" | "falso"
+
+<std> ::- "using namespace std"<PuntoyComa>
+
+<inicio> ::- <hashtag><libreria>
+
+<libreria> ::- "<iostream>" | "<fstream>" | "<iosfwd>" | "<list>" | "<math>" | "<memory>" | "<new>" | "<numeric>" | "<ostream>" | "<queue>" | "<stdio>" | "<stdlib>" | "<string>" | "<typeinfo>" | "<vector>" | "<list>" | "<time>" | "<regex>" | "<iterator>" | "<thread>"
+
+<hashtag> ::- "#include" 
+
+<PuntoyComa> ::- ";"
