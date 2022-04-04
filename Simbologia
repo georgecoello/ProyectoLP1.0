@@ -1,0 +1,17 @@
+** Operadores aritmeticos
+// Uso para operaciones aritmeticas 
++ Suma
+- Resta
+* Multiplicacion
+/ Division
+
+** Operadores Logicos
+//Uso mayoritario condicional
+< Menor
+<= Menor o igual
+> Mayor
+>= Mayor o Igual
+!= Diferencia
+&& Conjuncion 
+|| Disyuncion
+== igualdad
