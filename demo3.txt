@@ -1,0 +1,113 @@
+=== Estructura del programa ===
+
+   * Inicio: #incluir libreria
+   * usando el espacio de nombres estándar;
+   * Declaración de las funciones
+   * Declaración de la función principal
+
+Ejemplo de cada una de las estructuras del programa:
+
+#include < iostream > usando el espacio de nombres estándar;
+
+vacio declarar () { //opciones de declaración: entero a; entero a = 7; booleano a = falso; entero a=7; booleano a=falso; }
+
+vacio leer (){ entrada>> a;
+               entrada>> b;
+ }
+
+vacio ciclosEimprimir (){ //Formas de imprimir cout << "El valor de a es " << a << endl; cout << "Texto"; cout << a << endl; cout << un;
+
+//Formas de los ciclos
+//Forma 1 del si
+si (a > 7){
+    salida <<a;
+}
+
+
+//Forma 2 del si
+si (a > 7){
+    entero a = a+1;
+    salida <<a;
+}
+
+//Forma 3 del si
+si (a > 7){
+    entero b;
+    entero c;
+    c = a+b;
+    salida <<c;
+}
+
+//Forma 4 del si
+si (c > 30){
+        si (a>b){
+            a=a+1;
+        }sino{
+            b=b+1;
+        }finsi
+        c=a+b;
+salida <<c;
+}
+
+//Formas del para
+//Forma 1 del para
+para (int i = 0; i < 5; i++){
+    salida << yo;
+}
+
+//Forma 2 del para
+para (int i = 0; i < 5; i++){
+    entero k;
+    salida << k;
+}
+
+//Forma 3 del para
+para (int i = 0; i < 5; i++){
+    entero k;
+    k = k+i;
+    salida << k;
+}
+
+//Forma 4 del para
+para (int i = 0; i < 10; i++){
+    entero k;
+    entero j;
+    k = k/j;
+    salida << k;
+}
+
+//Formas del mientras
+//Forma 1 del mientras
+mientras (a<10){
+    salida <<a;
+}
+
+//Forma 2 del mientras
+mientras (a=10){
+    entero k = 5;
+    salida << k;
+}
+
+//Forma 3 del mientras
+mientras (a>10){
+    entero k;
+    k = k+i;
+    salida << k;
+}
+
+//Forma 4 del mientras
+mientras (c>60){
+    a=a+1;
+    b=b+1;
+    c=a*b;
+}
+    salida << c;
+}
+
+}
+
+entero principal (){ declarar (); Leer (); ciclosEimprimir();
+
+devolver 0;
+
+}
