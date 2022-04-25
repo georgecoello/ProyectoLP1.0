@@ -7,7 +7,7 @@
 
 Ejemplo de cada una de las estructuras del programa:
 
-#include < iostream > usando el espacio de nombres estándar;
+#include < iostream >
 
 vacio declarar () { //opciones de declaración: 
   entero a; 
